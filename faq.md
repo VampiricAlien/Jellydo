@@ -1,15 +1,16 @@
-
+<h1>Jellyfin Frequently Ask Questions</h1>
+  
 <stong>Jellyfin webpage not displaying how it should?</strong>
 Clear browser cache and reload the page.
 
 <strong>Jellyfin web not working after upgrading to 10.7.0</strong>
-Reinstall jellyfin-web (/usr/share/jellyfin/web). OR replace the config file and add the contents from https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json
+Reinstall jellyfin-web (/usr/share/jellyfin/web). OR replace the config file and add the contents from <a href="https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json">
 
 <strong>Jellyfin can't read my media</strong>
 Command line (terminal): sudo chown -R jellyfin /media/yourusername/mediadrive (eg: sudo chown -R jellyfin /media/VampiricAlien/jellyfinmedia).
 
 <strong>What video files does Jellyfin support?</strong>
-https://jellyfin.org/docs/general/clients/codec-support.html
+<a href="https://jellyfin.org/docs/general/clients/codec-support.html">
 
 <strong>What is the best Video Compatibility file to use?</strong>
 MP4 as more clients support this.
