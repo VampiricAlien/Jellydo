@@ -1,0 +1,50 @@
+
+Jellyfin webpage not displaying how it should?
+
+Clear browser cache and reload the page.
+
+Jellyfin web not working after upgrading to 10.7.0
+
+Reinstall jellyfin-web (/usr/share/jellyfin/web). OR replace the config file and add the contents from https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json
+
+Jellyfin can't read my media
+
+Command line (terminal): sudo chown -R jellyfin /media/yourusername/mediadrive (eg: sudo chown -R jellyfin /media/VampiricAlien/jellyfinmedia).
+
+What video files does Jellyfin support?
+
+https://jellyfin.org/docs/general/clients/codec-support.html
+
+What is the best Video Compatibility file to use?
+
+MP4 as more clients support this.
+
+Best video codec to use?
+
+H.264 8Bit - this codec is supported by all jellyfin clients and all browsers (Direct play)
+
+Where are the logs?
+
+http://xxx.xxx.xxx.xxx:8096/web/index.html#!/log.html (x = IP address) You can also find the logs in /var/log/jellyfin
+
+Saving Artwork into media folders
+
+Each library has it's own settings, you can find them by going into the admin dashboard then library then the 3 dotted menu to edit the library.
+
+Working with reverse proxy
+
+https://jellyfin.org/docs/general/networking/index.html
+
+Can't connect to my server after installing a VPN
+
+VPN settings should have an option for access to LAN.
+
+Locked out of admin account
+
+Edit the jellyfin.db. From the command line install sqlite3 (database editor) sudo apt install sqlite3 then once intalled sudo -u jellyfin sqlite3 /var/lib/jellyfin/data/jellyfin.db
+
+How do I backup Jellyfin?
+
+Copy everything from /var/lib/jellyfin 
+Using Docker: For binds: you back up the folder you’ve set for config. 
+For volumes: follow the instructions at https://docs.docker.com/storage/volumes/#backup-restore-or-migrate-data-volumes for the volume holding the config.
